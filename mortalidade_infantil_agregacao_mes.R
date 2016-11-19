@@ -87,7 +87,7 @@ nascidosVivos <- rbind(nascido0005, nascido0614)
 rm("nascido0005", "nascido0614")
 
 # merge das bases nascidos vivos e mortalidade infantil municipio ano
-base <- merge(nascidosVivos, mort_infantil, by = c("Ano","IBGE6" , "IBGE7"), all = T)
+base <- merge(nascidosVivos, mort_infantil, by = c("Ano","mes","IBGE6" , "IBGE7"), all = T)
 
 base[is.na(base$Total_NascidoVivo), 4] <- 0
 base[is.na(base$Total_mort_inf), 16] <- 0
