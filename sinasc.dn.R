@@ -25,7 +25,7 @@ sinasc.dn <- function(years) {
     
     # endereço de coleta
     if(years < 1996){
-      url.base <- "ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/ANT/DNRES"
+      url.base <- "ftp://ftp.datasus.gov.br/dissemin/publicos//SINASC/ANT/DNRES"
     }else{
       url.base <- "ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/NOV/DNRES"
     }
