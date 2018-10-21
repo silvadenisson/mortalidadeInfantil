@@ -24,7 +24,11 @@ sinasc.dn <- function(years) {
     localnames <- file.path(tempdir(), filenames)
     
     # endereço de coleta
-    url.base   <- "ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/NOV/DNRES"
+    if(years < 1996){
+      url.base <- "ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/ANT/DNRES"
+    }else{
+      url.base <- "ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/NOV/DNRES"
+    }
     
     # conticional para se o arquivo já foi feito o download, na mesma secao do R não fazer novamente
     if( !file.exists(localnames) ) {
